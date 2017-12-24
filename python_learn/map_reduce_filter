@@ -52,6 +52,8 @@
 　　如果function参数为None，返回结果和sequence参数相同。
 
 3.reduce函数
+    在Python 3里,reduce()函数已经被从全局名字空间里移除了,它现在被放置在fucntools模块里 用的话要 先引 入：
+       from functools import reduce
 　　reduce函数，reduce函数会对参数序列中元素进行累积。
 
 　　reduce函数的定义：
