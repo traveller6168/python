@@ -20,3 +20,14 @@ def foo_num():
 foo_num()
 
 print(is_this_global)
+
+
+def foo_dec():
+    m = 3
+    def bar():
+        n = 4
+        print("test")
+        print(m+n)
+    print(m)
+#bar()
+foo_dec()
