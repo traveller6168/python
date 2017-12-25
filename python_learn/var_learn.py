@@ -28,6 +28,6 @@ def foo_dec():
         n = 4
         print("test")
         print(m+n)
-    print("ccc",m)
+    print("cccdd",m)
 #bar()
 foo_dec()
