@@ -31,5 +31,21 @@ print(arr_slice)
 print(arr)
 
 arr3d = np.array([[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]])
+print("test")
 print(arr3d)
+print("uid")
 print(arr3d[0])
+print('PWE')
+old_values = arr3d[0].copy()
+print(old_values)
+arr3d[0] = 42
+print("dd")
+print(arr3d)
+arr3d[0] = old_values
+print('QWWWW')
+print(arr3d)
+
+print("OO")
+print(arr[1:6])
+print("LLL")
+print(arr2)
