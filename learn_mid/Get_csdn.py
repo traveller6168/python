@@ -32,10 +32,10 @@ def getPage():
 # 主函数
 def main():
     # 获取txt文件总行数
-    count = len(open("C:/Users/zhaowh/PycharmProjects/python/Blog_URL.txt", 'rU').readlines())
+    count = len(open('Blog_Url.txt', 'rU').readlines())
     print(count)
     n = 0
-    urlfile = open("C:/Users/zhaowh/PycharmProjects/python/Blog_URL.txt", 'r')
+    urlfile = open('Blog_Url.txt', 'r')
     print("URI is : ",)
     # 循环获取每个博主的文章摘信息
     while n < count:  # 这里爬取2个人博客信息，正常情况count个博主信息
@@ -51,7 +51,7 @@ def main():
         # 数据库操作结合
         try:
             conn = pymysql.connect(host='localhost', user='myuser',
-                                   passwd='w213486582', port=3306, db='mydb',charset='utf8')
+                                   passwd='123456', port=3306, db='test',charset='utf8')
             cur = conn.cursor()  # 数据库游标
 
             # 报错:UnicodeEncodeError: 'latin-1' codec can't encode character

@@ -18,7 +18,7 @@ wl_space_split = " ".join(wordlist)
 print(wl_space_split)
 
 #对分词后的文本生成词云
-my_wordcloud = WordCloud().generate((wl_space_split))
+my_wordcloud = WordCloud(font_path='../simheittf.ttf').generate((wl_space_split))
 
 #显示词云图
 plt.imshow(my_wordcloud)
