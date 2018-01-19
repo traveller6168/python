@@ -1,29 +1,19 @@
-#!/usr/bin/python3
-'makeTextFIle.py -- create text file'
-
+#!/usr/bin/env python3
 import os
-ls = os.linesep
-
-#get filename
-while True:
- if os.path.exists(fname):
-    print ("ERROR: '%d' already exists" % fname)
- else:
-    break
-
-# get file content (text) lines
-all = []
-print ("\nEnter line ('.' by itself to quit).\n")
-
-#loop until user terminates input
-while True:
-    entry = input('> ')
-    if entry == '.':
-        break
+from glob import glob #用到了这个模块
+def search_file(pattern, search_path=os.environ['PATH'], pathsep=os.pathsep):
+    for path in search_path.split(os.pathsep):
+        for match in glob(os.path.join(path, pattern)):
+            yield match
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv)<2  or sys.argv[1].startswith('-'):#sys.argv[0]是当前路径,1开始是后面的参数
+        print( 'Use: %s <pattern>' % sys.argv[0])
+        sys.exit(1)
+    if len(sys.argv)>2:
+        matchs = list(search_file(sys.argv[1],sys.argv[2]))
     else:
-        all.append(entry)
-#write lines to file with proper line-ending
-fobj = open(fname,'w')
-fobj.writelines(['%s%s' % (x,ls) for x in all])
-fobj.close()
-print ('DONE!')
+        matchs = list(search_file(sys.argv[1]))
+    print( '%d match' % len(matchs))
+    for match in matchs:
+        print( match)
