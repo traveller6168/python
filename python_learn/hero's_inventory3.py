@@ -23,5 +23,16 @@ print("inventory[",start,":",finish,"] is",end=" ")
 print(inventory[start:finish])
 print("contunue!")
 
+#连接两个列表
+chest = ["gold","gems"]
+print("You find a chest which contains:")
+print(chest)
+print("You add the contents of the chest to your inventory.")
+inventory += chest
+print("Your inventory is now:")
+print(inventory)
+
+
+
 
 
