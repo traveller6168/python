@@ -21,7 +21,7 @@ class logger:
     fmt = logging.Formatter('[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
 
     #日志输出到文件，这里用到日志名称，大小，保存个数
-    handle1 = logging._handlers.RotatingFileHandler(log_name,maxBytes=log_size,backupCount=log_num)
+    handle1 = logging.handlers.RotatingFileHandler(log_name,maxBytes=log_size,backupCount=log_num)
     handle1.setFormatter(fmt)
     #同时输出到屏幕，便于观察
     handle2 = logging.StreamHandler(stream=sys.stdout)
