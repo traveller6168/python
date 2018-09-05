@@ -18,7 +18,7 @@ class logger:
     #初始化logger
     log = logging.getLogger()
     #日志格式，可以根据需要设置
-    fmt = logging.Formatter('[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
+    fmt = logging.Formatter('%(asctime)s | Script name is %(filename)s | %(levelname)s: %(message)s', '%Y-%m-%d %H:%M:%S %p')
 
     #日志输出到文件，这里用到日志名称，大小，保存个数
     handle1 = logging.handlers.RotatingFileHandler(log_name,maxBytes=log_size,backupCount=log_num)
