@@ -1,0 +1,16 @@
+[2018-09-05 23:00:41][get_log_info.py][line:38][INFO] this is test
+[2018-09-05 23:03:26 PM][get_log_info.py][line:38][INFO] this is test
+2018-09-05 23:04:00 PM [get_log_info.py][line:38][INFO] this is test
+Time is 2018-09-05 23:04:27 PM [get_log_info.py][line:38][INFO] this is test
+2018-09-05 23:05:09 PM Script name is get_log_info.py][line:38][INFO] this is test
+2018-09-05 23:05:23 PM | Script name is get_log_info.py][line:38][INFO] this is test
+2018-09-05 23:06:45 PM | Script name is get_log_info.py | INFO this is test
+2018-09-05 23:07:03 PM | Script name is get_log_info.py | INFO this is test:
+2018-09-05 23:08:00 PM | Script name is get_log_info.py | INFO this is test:
+2018-09-05 23:08:15 PM | Script name is get_log_info.py | INFO: this is test
+2018-09-06 21:26:57 PM | Script name is logger.py | INFO: this is test
+2018-09-06 21:37:12 PM | Script name is logger.py | INFO: this is test
+2018-09-06 21:47:39 PM | Script name is logger.py  | INFO: this is test
+2018-09-06 21:49:11 PM | Script name is logger.py  | INFO: this is test
+2018-09-06 22:12:44 PM | Script name is logger.py  | INFO: this is test
+2018-09-06 22:22:30 PM | Script name is logger.py  |Script name is root  | INFO: this is test
