@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import math
-from python_learn.get_log_info import *
+from python_learn.logger import *
 
 print('{name}websitte:{site}'.format(name='sosos',site='www.nn.com'))
 
@@ -14,4 +14,11 @@ for name,number in table.items():
 print('Runoob: {0[Runoob]:d}; Google:{0[Google]:d};Taobao:{0[Taobao]:d}'.format(table))
 
 
-logger.info('this is test')
+test = logger()
+try:
+    y = 5/0
+    print (y)
+except:
+   #print(sys.exc_info())
+   test.set_logger('log_test','program run error')
+   #test.set_logger('log_test','ddddd')
